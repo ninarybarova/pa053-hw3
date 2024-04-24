@@ -1,6 +1,5 @@
 import requests
 
-from simpleeval import simple_eval
 from flask import Flask, request, Response
 
 
@@ -53,7 +52,7 @@ def queryStock(param):
     return price
 
 def queryEval(param):
-    result = simple_eval(param)
+    result = eval(param)
     return result
 
 if __name__ == '__main__':
